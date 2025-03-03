@@ -1,17 +1,23 @@
-html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Templo Pirlo Putero - Interior</title>
-    <!-- Referencias CSS externas -->
+    <meta name="description" content="Bienvenido al Templo Pirlotero, un espacio para la veneración de Pirlo">
+    <title>Templo Pirlotero - Interior</title>
+    
+ 
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/introduccion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+  
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body class="interior-page">
-    <!-- Overlay de carga -->
+  
     <div class="loading-overlay">
         <div class="loader"></div>
     </div>
@@ -25,7 +31,7 @@ html -->
             </button>
             <nav class="main-nav" id="main-nav">
                 <ul>
-                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Inicio</a></li>
                     <li><a href="#historia"><i class="fas fa-book"></i> Historia</a></li>
                     <li><a href="#entretenimiento"><i class="fas fa-gamepad"></i> Entretenimiento</a></li>
                     <li><a href="#secretos"><i class="fas fa-key"></i> Secretos</a></li>
@@ -76,7 +82,7 @@ html -->
                             <span><i class="fas fa-play-circle"></i> Ver video</span>
                         </div>
                     </div>
-                    <img src="img/PikPng.com_bunny-png_1219597.png" alt="Conejo HTML" class="feature-image" loading="lazy">
+                    <img src="../img/PikPng.com_bunny-png_1219597.png" alt="Conejo HTML" class="feature-image" loading="lazy">
                 </a>
                 <div class="feature-text">
                     <h3>El guardián de los códigos antiguos</h3>
@@ -93,8 +99,8 @@ html -->
             <div class="media-grid">
                 <div class="media-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="media-container dark-theme">
-                        <video controls loop class="video-player" poster="img/Imagen de WhatsApp 2024-02-22 a las 08.52.19_e4c20660.jpg" preload="metadata" loading="lazy">
-                            <source src="video/Comeme el culo.mp4" type="video/mp4">
+                        <video controls loop class="video-player" poster="../img/Imagen de WhatsApp 2024-02-22 a las 08.52.19_e4c20660.jpg" preload="metadata" loading="lazy">
+                            <source src="../video/Comeme el culo.mp4" type="video/mp4">
                             Tu navegador no soporta videos HTML5.
                         </video>
                         <div class="media-controls">
@@ -112,7 +118,7 @@ html -->
                 <div class="media-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="media-container dark-theme">
                         <audio controls loop class="audio-player" preload="metadata">
-                            <source src="audio/y2mate.com - all goofy ahh sound effects for 2023 memes.mp3" type="audio/mp3">
+                            <source src="../audio/y2mate.com - all goofy ahh sound effects for 2023 memes.mp3" type="audio/mp3">
                             Tu navegador no soporta audio HTML5.
                         </audio>
                     </div>
@@ -145,7 +151,7 @@ html -->
                 <div class="footer-section">
                     <h3>Navegación</h3>
                     <ul>
-                        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="../index.html"><i class="fas fa-home"></i> Inicio</a></li>
                         <li><a href="#historia"><i class="fas fa-book"></i> Historia</a></li>
                         <li><a href="#entretenimiento"><i class="fas fa-gamepad"></i> Entretenimiento</a></li>
                         <li><a href="#secretos"><i class="fas fa-key"></i> Secretos</a></li>
@@ -167,12 +173,13 @@ html -->
         </div>
     </footer>
 
-    <!-- Botón para volver arriba -->
+
     <button id="scroll-top" class="scroll-top" aria-label="Volver arriba">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Scripts externos -->
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../JS/introduccion.js"></script>
 </body>
 </html>

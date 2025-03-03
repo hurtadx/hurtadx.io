@@ -4,13 +4,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const agreeBtn = document.getElementById('agree-btn');
     const declineBtn = document.getElementById('decline-btn');
     
-    agreeBtn.addEventListener('click', function() {
-        consentDialog.style.display = 'none';
-    });
+    if (agreeBtn) {
+        agreeBtn.addEventListener('click', function() {
+            consentDialog.style.display = 'none';
+            // Generar número de seguimiento
+            const trackingId = generateId();
+            const trackingElement = document.getElementById('tracking-id');
+            if (trackingElement) {
+                trackingElement.textContent = trackingId;
+            }
+        });
+    }
 
-    declineBtn.addEventListener('click', function() {
-        window.location.href = 'https://www.google.com';
-    });
+    if (declineBtn) {
+        declineBtn.addEventListener('click', function() {
+            // Ruta corregida para volver a introduccion.html
+            window.location.href = 'introduccion.html';
+        });
+    }
+
+    // Función para generar un ID aleatorio
+    function generateId() {
+        return Math.random().toString(36).substr(2, 9).toUpperCase();
+    }
+
+    // Función para confirmar salida
+    window.confirmExit = function() {
+        if (confirm('¿Realmente quieres abandonar esta página? Lo que has visto no puede ser borrado de tu memoria.')) {
+            // Ruta corregida para volver a introduccion.html
+            window.location.href = 'introduccion.html';
+        }
+    };
 
     function updateCountdown() {
         const countdownElement = document.getElementById('countdown');
@@ -19,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const minutesElement = document.getElementById('minutes');
         const secondsElement = document.getElementById('seconds');
 
-        const targetDate = new Date('2025-12-31T23:59:59').getTime();
+        const targetDate = new Date('2025-11-27T23:59:59').getTime();
         const now = new Date().getTime();
         const distance = targetDate - now;
 
@@ -39,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    const countdownInterval = setInterval(updateCountdown, 1000);
+    setInterval(updateCountdown, 1000);
     updateCountdown();
 });
 

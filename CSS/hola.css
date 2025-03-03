@@ -5,7 +5,7 @@ body {
 
 .danger-page {
     background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), 
-                url('img/Imagen de WhatsApp 2024-02-22 a las 08.52.19_e4c20660.jpg');
+                                url('../img/Imagen de WhatsApp 2024-02-22 a las 08.52.19_e4c20660.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

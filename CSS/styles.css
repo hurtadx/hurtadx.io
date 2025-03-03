@@ -1,11 +1,10 @@
-body {
-    height: 100vh;
-    background-image: url(/hurtadx.io/img/Imagen\ de\ WhatsApp\ 2024-02-27\ a\ las\ 13.16.59_bd37f031.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+:root {
+    --primary-color: #ff3030;
+    --primary-dark: #c41b1b;
+    --primary-glow: rgba(255, 48, 48, 0.7);
+    --secondary-color: #ff8c00;
+    --dark-bg: #121212;
+    --text-light: #f5f5f5;
     position: relative;
     overflow: hidden;
 }
