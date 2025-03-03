@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Hombre Peligroso | Templo Pirlo</title>
+    <link rel="stylesheet" href="CSS/hola.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="danger-page">
+    <div id="consent-dialog">
+        <div class="consent-content">
+            <h2 class="consent-title"><i class="fas fa-exclamation-triangle"></i> ADVERTENCIA</h2>
+            <p class="consent-text">Estás a punto de ver contenido extremadamente peligroso. El Templo Pirlotero no se hace responsable de las posibles consecuencias psicológicas, espirituales o interdimensionales que pueda causar la exposición a este material.</p>
+            <p class="consent-text">¿Deseas continuar bajo tu propio riesgo?</p>
+            <div class="consent-buttons">
+                <button id="agree-btn" class="consent-btn agree-btn">Acepto el riesgo</button>
+                <button id="decline-btn" class="consent-btn decline-btn">Volver a la seguridad</button>
+            </div>
+        </div>
+    </div>
+    
+    <header>
+        <div class="container">
+            <h1 class="danger-title"><i class="fas fa-skull"></i> EL HOMBRE MÁS PELIGROSO DEL MUNDO <i class="fas fa-skull"></i></h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="danger-container">
+            <div class="danger-countdown" id="countdown">
+                <div>
+                    <div class="count-value" id="days">00</div>
+                    <div class="countdown-label">DÍAS</div>
+                </div>
+                <div>
+                    <div class="count-value" id="hours">00</div>
+                    <div class="countdown-label">HORAS</div>
+                </div>
+                <div>
+                    <div class="count-value" id="minutes">00</div>
+                    <div class="countdown-label">MINUTOS</div>
+                </div>
+                <div>
+                    <div class="count-value" id="seconds">00</div>
+                    <div class="countdown-label">SEGUNDOS</div>
+                </div>
+            </div>
+            
+            <div class="video-container-danger">
+                <div class="danger-strip"></div>
+                <div class="media-container enhanced">
+                    <video controls autoplay muted id="dangerVideo">
+                        <source src="video/Video de WhatsApp 2024-02-24 a las 12.45.34_3b04fc46.mp4" type="video/mp4">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                </div>
+                <div class="danger-strip danger-strip-bottom"></div>
+            </div>
+            
+            <div class="warning-text">
+                <h3><i class="fas fa-radiation"></i> ADVERTENCIA: CONTENIDO EXTREMADAMENTE PELIGROSO</h3>
+                <p>Lo que acabas de presenciar es información clasificada. Por tu propia seguridad, no compartas este material con nadie. El Templo Pirlotero no se hace responsable de las consecuencias.</p>
+                <p>Tu número de identificación para seguimiento: <span id="tracking-id"></span></p>
+            </div>
+        </div>
+    </div>
+    
+    <button onclick="confirmExit()" class="back-btn" title="Volver a la seguridad"><i class="fas fa-door-open"></i></button>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Templo de Pirlo Putero - Todos los derechos reservados</p>
+            <p><small>Este contenido está bajo vigilancia constante</small></p>
+        </div>
+    </footer>
+
+    <script src="JS/hola.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+body {
+    background-color: #000;
+    position: relative;
+}
+
+.danger-page {
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), 
+                url('img/Imagen de WhatsApp 2024-02-22 a las 08.52.19_e4c20660.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.danger-title {
+    color: crimson;
+    text-shadow: 2px 2px 8px rgba(255,0,0,0.6);
+    animation: flicker 2s infinite alternate;
+    font-size: 2.5rem;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #ff0000;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+.danger-container {
+    border: 3px solid crimson;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.danger-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 1px solid #ff3030;
+    border-radius: 7px;
+    animation: pulse-border 2s infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes pulse-border {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.back-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff3030;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(255,0,0,0.5);
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255,0,0,0.7);
+    background-color: #ff0000;
+}
+
+.video-container-danger {
+    position: relative;
+    margin: 40px 0;
+}
+
+.danger-strip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: repeating-linear-gradient(
+        45deg,
+        #ff0000,
+        #ff0000 15px,
+        #000000 15px,
+        #000000 30px
+    );
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.danger-strip-bottom {
+    top: auto;
+    bottom: 0;
+}
+
+.warning-text {
+    font-size: 1.2rem;
+    color: #ff3030;
+    margin-top: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 5px;
+    border-left: 5px solid #ff3030;
+}
+
+.danger-countdown {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff3030;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.count-value {
+    margin: 0 5px;
+    background-color: rgba(255,0,0,0.2);
+    padding: 10px 15px;
+    border-radius: 5px;
+    min-width: 60px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255,0,0,0.5);
+}
+
+.countdown-label {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+#consent-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.consent-content {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    border: 2px solid #ff3030;
+}
+
+.consent-title {
+    color: #ff3030;
+    margin-bottom: 20px;
+}
+
+.consent-text {
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+.consent-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.consent-btn {
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.agree-btn {
+    background-color: #ff3030;
+    color: white;
+    border: none;
+}
+
+.agree-btn:hover {
+    background-color: #e01e1e;
+}
+
+.decline-btn {
+    background-color: transparent;
+    color: #ddd;
+    border: 1px solid #ddd;
+}
+
+.decline-btn:hover {
+    background-color: rgba(255,255,255,0.1);
+}

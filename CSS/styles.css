@@ -1,0 +1,146 @@
+body {
+    height: 100vh;
+    background-image: url(/hurtadx.io/img/Imagen\ de\ WhatsApp\ 2024-02-27\ a\ las\ 13.16.59_bd37f031.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.portal-container {
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    z-index: 1;
+    border: 2px solid #ff3030;
+    box-shadow: 0 0 20px rgba(255, 30, 30, 0.6);
+    position: relative;
+}
+
+.portal-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ff3030;
+    text-shadow: 0 0 10px #ff0000;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+    }
+    to {
+        text-shadow: 0 0 15px #ff0000, 0 0 20px #ff3030;
+    }
+}
+
+.portal-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff3030;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+.portal-btn:hover {
+    background-color: #ff1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6);
+}
+
+.portal-btn:active {
+    transform: translateY(-1px);
+}
+
+.portal-description {
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 30px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff3030;
+}
+
+.background-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.floating-element {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #ff3030;
+    opacity: 0.6;
+    border-radius: 50%;
+    animation: float 15s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-20vh) translateX(30vw);
+        opacity: 0;
+    }
+}
