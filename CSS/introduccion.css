@@ -32,8 +32,7 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
+html, body {
   height: 100%;
 }
 
@@ -42,7 +41,8 @@ body {
   font-family: 'Poppins', sans-serif;
   color: var(--text-light);
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden; 
+  overflow-y: auto; 
   background-color: var(--dark-bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -78,6 +78,8 @@ a:hover {
   background-color: var(--darker-bg);
   background-image: url('../img/subtle_texture.png');
   background-repeat: repeat;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
 .loading-overlay {
@@ -147,6 +149,7 @@ header {
   z-index: 100;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 48, 48, 0.25);
+  width: 100%;
 }
 
 header .container {
@@ -286,6 +289,7 @@ h1 i {
 
 section {
   margin-bottom: var(--spacing-xl);
+  width: 100%;
 }
 
 .section-block {

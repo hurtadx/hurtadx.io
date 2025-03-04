@@ -1,14 +1,27 @@
 body {
     background-color: #000;
     position: relative;
+    margin: 0;
+    min-height: 100vh;
 }
 
+
 .danger-page {
-    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), 
-                                url('../img/Imagen de WhatsApp 2024-02-22 a las 08.52.19_e4c20660.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    min-height: 100vh;
+    background: url('../img/Imagen de WhatsApp 2024-02-22 a las 08.52.19_e4c20660.jpg') center/cover no-repeat fixed;
+    position: relative;
+    padding: 2rem;
+}
+
+.danger-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
 }
 
 .danger-title {
@@ -27,12 +40,15 @@ body {
     }
 }
 
+
 .danger-container {
-    border: 3px solid crimson;
-    border-radius: 5px;
-    padding: 20px;
     position: relative;
-    background-color: rgba(0,0,0,0.7);
+    z-index: 2;
+    border: 3px solid crimson;
+    border-radius: 10px;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 .danger-container::before {
@@ -81,10 +97,34 @@ body {
     background-color: #ff0000;
 }
 
+
 .video-container-danger {
     position: relative;
-    margin: 40px 0;
+    margin: 40px auto; 
+    max-width: 800px;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    z-index: 2;
 }
+
+.video-wrapper {
+    position: relative;
+    padding: 40px 0;
+    background: transparent;
+}
+
+.video-container-danger video {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    z-index: 3;
+}
+
 
 .danger-strip {
     position: absolute;
@@ -94,18 +134,70 @@ body {
     height: 40px;
     background: repeating-linear-gradient(
         45deg,
-        #ff0000,
-        #ff0000 15px,
-        #000000 15px,
-        #000000 30px
+        rgba(255, 0, 0, 0.7),
+        rgba(255, 0, 0, 0.7) 15px,
+        rgba(0, 0, 0, 0.7) 15px,
+        rgba(0, 0, 0, 0.7) 30px
     );
-    opacity: 0.7;
-    z-index: 1;
+    z-index: 4;
 }
 
 .danger-strip-bottom {
     top: auto;
     bottom: 0;
+}
+
+
+.video-container-danger::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        rgba(255, 0, 0, 0.3),
+        transparent 60%,
+        rgba(255, 0, 0, 0.3));
+    z-index: -1;
+    border-radius: 10px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.video-container-danger video::-webkit-media-controls {
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.7)
+    );
+}
+
+
+.video-container-danger:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.video-container-danger video {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.video-container-danger video::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .warning-text {
@@ -115,11 +207,15 @@ body {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 20px;
     border-radius: 5px;
     border-left: 5px solid #ff3030;
+    backdrop-filter: blur(3px);
+    z-index: 2;
+    position: relative;
 }
+
 
 .danger-countdown {
     font-size: 2.5rem;
@@ -129,16 +225,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 15px;
+    z-index: 2;
+    position: relative;
 }
 
 .count-value {
-    margin: 0 5px;
-    background-color: rgba(255,0,0,0.2);
-    padding: 10px 15px;
-    border-radius: 5px;
-    min-width: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 20px;
+    border-radius: 8px;
+    min-width: 70px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(255,0,0,0.5);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.count-value:hover {
+    background-color: rgba(255, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .countdown-label {

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (agreeBtn) {
         agreeBtn.addEventListener('click', function() {
             consentDialog.style.display = 'none';
-            // Generar número de seguimiento
+     
             const trackingId = generateId();
             const trackingElement = document.getElementById('tracking-id');
             if (trackingElement) {
@@ -18,20 +18,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (declineBtn) {
         declineBtn.addEventListener('click', function() {
-            // Ruta corregida para volver a introduccion.html
+            
             window.location.href = 'introduccion.html';
         });
     }
 
-    // Función para generar un ID aleatorio
+
     function generateId() {
         return Math.random().toString(36).substr(2, 9).toUpperCase();
     }
 
-    // Función para confirmar salida
+
     window.confirmExit = function() {
         if (confirm('¿Realmente quieres abandonar esta página? Lo que has visto no puede ser borrado de tu memoria.')) {
-            // Ruta corregida para volver a introduccion.html
+
             window.location.href = 'introduccion.html';
         }
     };
